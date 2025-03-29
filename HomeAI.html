@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub - Xem Phim Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/random/1920x1080/?movie');
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .movie-card {
+            transition: transform 0.3s;
+        }
+        .movie-card:hover {
+            transform: translateY(-5px);
+        }
+        .movie-card img {
+            height: 300px;
+            object-fit: cover;
+        }
+        .category-section {
+            padding: 50px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MovieHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Phim mới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Thể loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Phim lẻ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Phim bộ</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm phim...">
+                    <button class="btn btn-outline-light" type="submit">Tìm</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold">Xem Phim Online</h1>
+                    <p class="lead">Khám phá hàng ngàn bộ phim hay nhất với chất lượng cao</p>
+                    <button class="btn btn-primary btn-lg">Xem ngay</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movies -->
+    <section class="category-section">
+        <div class="container">
+            <h2 class="mb-4">Phim Nổi Bật</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card movie-card">
+                        <img src="https://source.unsplash.com/random/300x450/?movie-poster" class="card-img-top" alt="Movie">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên Phim 1</h5>
+                            <p class="card-text">2024 • Hành động</p>
+                            <a href="#" class="btn btn-primary">Xem phim</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card movie-card">
+                        <img src="https://source.unsplash.com/random/300x450/?cinema" class="card-img-top" alt="Movie">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên Phim 2</h5>
+                            <p class="card-text">2024 • Tình cảm</p>
+                            <a href="#" class="btn btn-primary">Xem phim</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card movie-card">
+                        <img src="https://source.unsplash.com/random/300x450/?film" class="card-img-top" alt="Movie">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên Phim 3</h5>
+                            <p class="card-text">2024 • Hài hước</p>
+                            <a href="#" class="btn btn-primary">Xem phim</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card movie-card">
+                        <img src="https://source.unsplash.com/random/300x450/?movie-scene" class="card-img-top" alt="Movie">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên Phim 4</h5>
+                            <p class="card-text">2024 • Kinh dị</p>
+                            <a href="#" class="btn btn-primary">Xem phim</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="category-section bg-light">
+        <div class="container">
+            <h2 class="mb-4">Thể Loại</h2>
+            <div class="row">
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-film fa-2x mb-2"></i>
+                            <h5 class="card-title">Hành động</h5>
+                            <p class="card-text">150 phim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-heart fa-2x mb-2"></i>
+                            <h5 class="card-title">Tình cảm</h5>
+                            <p class="card-text">120 phim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-laugh fa-2x mb-2"></i>
+                            <h5 class="card-title">Hài hước</h5>
+                            <p class="card-text">100 phim</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-6 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fas fa-ghost fa-2x mb-2"></i>
+                            <h5 class="card-title">Kinh dị</h5>
+                            <p class="card-text">80 phim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Về MovieHub</h5>
+                    <p>MovieHub là nền tảng xem phim trực tuyến hàng đầu với hàng ngàn bộ phim chất lượng cao.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light">Trang chủ</a></li>
+                        <li><a href="#" class="text-light">Phim mới</a></li>
+                        <li><a href="#" class="text-light">Thể loại</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Kết nối với chúng tôi</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 MovieHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
