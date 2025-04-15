@@ -32,6 +32,14 @@
                     <i class="fas fa-crown mr-3"></i>
                     Quản lý gói đăng ký
                 </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <i class="fas fa-comments mr-3"></i>
+                    Quản lý bình luận
+                </a>
+                <a href="#" class="flex items-center px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-white">
+                    <i class="fas fa-tags mr-3"></i>
+                    Quản lý thể loại
+                </a>
             </nav>
         </div>
 
