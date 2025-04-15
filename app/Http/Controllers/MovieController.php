@@ -16,7 +16,10 @@ class MovieController extends Controller
             $apiKey = config('services.tmdb.api_key');
             if (!$apiKey) {
                 Log::error('TMDB API key not found in config');
-                return view('movies.index', ['categories' => []]);
+                return view('movies.index', [
+                    'categories' => [],
+                    'randomMovies' => []
+                ]);
             }
 
             // Lấy phim phổ biến
@@ -29,7 +32,10 @@ class MovieController extends Controller
                     'status' => $popularResponse->status(),
                     'body' => $popularResponse->body()
                 ]);
-                return view('movies.index', ['categories' => []]);
+                return view('movies.index', [
+                    'categories' => [],
+                    'randomMovies' => []
+                ]);
             }
 
             $popularMovies = $popularResponse->json()['results'] ?? [];
@@ -82,7 +88,10 @@ class MovieController extends Controller
                 'error' => $e->getMessage(),
                 'trace' => $e->getTraceAsString()
             ]);
-            return view('movies.index', ['categories' => []]);
+            return view('movies.index', [
+                'categories' => [],
+                'randomMovies' => []
+            ]);
         }
     }
 
@@ -253,7 +262,7 @@ class MovieController extends Controller
     {
         $apiKey = config('services.tmdb.api_key');
         if (!$apiKey) {
-            \Log::error('TMDB API key not found');
+            Log::error('TMDB API key not found');
             return null;
         }
 
@@ -268,7 +277,7 @@ class MovieController extends Controller
 
             return json_decode($response->getBody(), true);
         } catch (\Exception $e) {
-            \Log::error('Error fetching movie details: ' . $e->getMessage());
+            Log::error('Error fetching movie details: ' . $e->getMessage());
             return null;
         }
     }
